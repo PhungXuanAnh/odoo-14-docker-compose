@@ -3,6 +3,9 @@ services:
   db:
     image: postgres:13
     user: root
+    container_name: odoo-14-db
+    ports:
+      - "5432:5432"
     environment:
       - POSTGRES_PASSWORD=odoo
       - POSTGRES_USER=odoo
@@ -13,6 +16,7 @@ services:
 
   odoo14:
     image: odoo:14
+    container_name: odoo-14
     user: root
     depends_on:
       - db
@@ -20,7 +24,8 @@ services:
       - "10014:8069"
       - "20014:8072" # live chat
     tty: true
-    command: --
+    # command: --
+    command: --dev=all  # NOTE: fix auto reload odoo when any code changed, https://viindoo.com/documentation/14.0/developer/development/installing-the-odoo-development-environment.html
 #    command: odoo scaffold /mnt/extra-addons/custom_module
     environment:
       - HOST=db

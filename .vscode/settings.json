@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [     // this config can be used to replace for python.envFile. You can add lib paths to either settings
+        "/home/xuananh/repo/odoo/"
+    ],
+}
