@@ -9,7 +9,7 @@
                     <sheet>
                         <div class="oe_title">
                             <label for="name" string="Pet Name" class="oe_edit_only"/>
-                            <h1><field name="name" placeholder="e.g. Kittie"/></h1>
+                            <h1><field name="name" placeholder="e.g. Kittie" widget="bold_red"/></h1>
                             <label for="owner_id"/>
                             <h3><field name="owner_id"/></h3>
                         </div>
@@ -27,10 +27,10 @@
                             <page name="general_information" string="General Information">
 								<group>
 									<group>
-										<field name="nickname"/>
+										<field name="nickname" widget="bold_red"/>
 									</group>
 									<group>
-										<label for="description" colspan="2"/>
+										<label for="description" colspan="2" widget="bold_red"/>
 										<field name="description" colspan="2" nolabel="1"/>
 									</group>
 								</group>
