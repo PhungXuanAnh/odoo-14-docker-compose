@@ -13,6 +13,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/my_pet_views.xml',
+        'wizard/batch_update.xml',
     ],
     # 'qweb': ['static/src/xml/*.xml'],
     'installable': True,
