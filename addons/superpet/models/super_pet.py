@@ -1,4 +1,9 @@
 # -*- coding: utf-8 -*-
+"""
+Prototype Inheritance: 
+copy field, copy phương thức trong model đã có; 
+tổ chức database lưu trữ trong bảng mới khác với bảng của model gốc.
+"""
 from odoo import api, fields, models, tools, _
 from odoo.exceptions import UserError, ValidationError
 

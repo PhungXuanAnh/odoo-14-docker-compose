@@ -1,4 +1,9 @@
 # -*- coding: utf-8 -*-
+"""
+class inheritance
+thêm field, chỉnh sửa field, chỉnh sửa phương thức trong model đã có; 
+tổ chức database lưu trữ chung một bảng với model gốc.
+"""
 from odoo import api, fields, models, tools, _
 from odoo.exceptions import UserError, ValidationError
 

@@ -14,6 +14,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/my_pet_plus_views.xml',
+        'views/product_pet_views.xml',
         # 'views/templates.xml',  # reference: https://www.odoo.com/documentation/14.0/developer/reference/javascript/javascript_reference.html
         # 'wizard/batch_update.xml',
         # 'views/res_config_settings_views.xml', # <-- add this
