@@ -16,9 +16,11 @@
         'views/templates.xml',  # reference: https://www.odoo.com/documentation/14.0/developer/reference/javascript/javascript_reference.html
         'wizard/batch_update.xml',
         'views/res_config_settings_views.xml', # <-- add this
-
     ],
-    # 'qweb': ['static/src/xml/*.xml'],
+    'qweb': [
+        # 'static/src/xml/*.xml'
+        'static/src/xml/btn_tree_multi_update.xml',
+    ],
     'installable': True,
     'application': True,
 }

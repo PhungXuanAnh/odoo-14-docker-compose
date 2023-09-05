@@ -38,3 +38,23 @@ class MyPet(models.Model):
                     raise ValidationError(_("Duplicated pet name @ %s" % pet_name))
         return super(MyPet, self).create(vals)
 
+    @api.model
+    def btn_multi_update(self):
+        # we can do something on records... it's up to you!
+        # res = { 'type': 'ir.actions.client', 'tag': 'reload' } # reload the current page/url
+        active_ids = [pet.id for pet in self.env["my.pet"].search([])]
+        res = {            
+            "name": _("Multi Update"),
+            "type": "ir.actions.act_window",
+            "res_model": "my.pet.batchupdate.wizard",
+            "binding_model_id": self.env['ir.model']._get("my.pet").id,
+            "view_mode": "form",
+            "target": "new",
+            "views": [[False, 'form']],
+            "context": {
+                "active_ids": active_ids,
+                "default_dob": fields.Date.context_today(self),
+                "default_owner_id": self.env.user.partner_id.id,
+            },
+        }
+        return res
