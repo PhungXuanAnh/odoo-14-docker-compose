@@ -69,6 +69,19 @@
             </field>
         </record>
 
+        <record id="my_pet_search_view" model="ir.ui.view">
+            <field name="name">my_pet_search_view</field>
+            <field name="model">my.pet</field>
+            <field eval="10" name="priority"/>
+            <field name="arch" type="xml">
+                <search string="My Pet Search">
+                    <field name="name" string="Pet Name"/>
+                    <field name="nickname" string="Nick Name"/>
+                    <field name="owner_id"/>
+                </search>
+            </field>
+        </record>
+
         <record id="action_my_pet" model="ir.actions.act_window">
             <field name="name">My Pet</field>
             <field name="type">ir.actions.act_window</field>
@@ -77,6 +90,7 @@
             <field name="view_ids" eval="[(5, 0, 0),
                 (0, 0, {'view_mode': 'tree', 'view_id': ref('my_pet_tree_view')}),
                 (0, 0, {'view_mode': 'form', 'view_id': ref('my_pet_form_view')})]"/>
+            <field name="search_view_id" ref="my_pet_search_view"/>
         </record>
 
         <menuitem id="menu_my_pet"
