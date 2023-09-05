@@ -87,6 +87,13 @@
                         <filter name="male_filter" string="Male" domain="[('gender', '=',  'male')]"/>
                         <filter name="female_filter" string="Female" domain="[('gender', '=',  'female')]"/>
                     </group>
+                    <!-- ++++++++++++++++++++++++++++++++++++++++++++++ -->
+                    <!-- khai báo các Group By trong Odoo như bên dưới: -->
+                    <!-- ++++++++++++++++++++++++++++++++++++++++++++++ -->
+                    <group expand='0' string='Group by...'>
+                        <filter string='Gender' name="gender_group" context="{'group_by': 'gender'}"/>
+                        <filter string='Owner' name="owner_group" context="{'group_by': 'owner_id'}"/>
+                    </group>
                 </search>
             </field>
         </record>
