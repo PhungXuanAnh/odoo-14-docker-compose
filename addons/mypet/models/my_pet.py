@@ -58,3 +58,10 @@ class MyPet(models.Model):
             },
         }
         return res
+
+    def custom_remove(self):
+        for pet in self:
+            pet.unlink()
+        #_logger.warning(self.id) # 5
+        #_logger.warning(self.ids) # [5]
+        pass

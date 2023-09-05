@@ -64,6 +64,7 @@
                     <field name="dob"/>
                     <field name="gender"/>
                     <field name="owner_id"/>
+                    <button name="custom_remove" type="object" string="Remove" class="oe_highlight"/>
                 </tree>
             </field>
         </record>
