@@ -78,6 +78,15 @@
                     <field name="name" string="Pet Name"/>
                     <field name="nickname" string="Nick Name"/>
                     <field name="owner_id"/>
+                    <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+                    <!-- khai báo các filter trong Odoo như bên dưới: -->
+                    <!-- ++++++++++++++++++++++++++++++++++++++++++++ -->
+                    <group expand='0' string='Filters'>
+                        <filter name='weight_filter' string="Low Weight (&lt; 5kg)" domain="[('weight', '&lt;', 5)]"/>
+                        <separator/>
+                        <filter name="male_filter" string="Male" domain="[('gender', '=',  'male')]"/>
+                        <filter name="female_filter" string="Female" domain="[('gender', '=',  'female')]"/>
+                    </group>
                 </search>
             </field>
         </record>
